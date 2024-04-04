@@ -4,6 +4,7 @@ import Link from "next/link";
 import { clsx } from "clsx";
 import { Title } from "./title";
 import { FaStar } from "react-icons/fa6";
+import { RevealOnScroll } from "./reveal-on-scroll";
 
 type Project = {
   title: string;
@@ -50,7 +51,9 @@ export const ProjectsUpdates = (props: {
       />
       <ol className="relative px-4 md:px-6">
         {props.projects.map((item) => (
-          <ProjectsTeaser key={item.href} {...item} />
+          <RevealOnScroll>
+            <ProjectsTeaser key={item.href} {...item} />
+          </RevealOnScroll>
         ))}
       </ol>
     </>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import matter from "gray-matter";
 import { clsx } from "clsx";
 import { Title } from "./title";
+import { RevealOnScroll } from "./reveal-on-scroll";
 
 type Blog = {
   title: string;
@@ -56,7 +57,9 @@ export const BlogsUpdates = (props: { blogs: Blog[] }): ReactElement => {
       />
       <ol className="relative px-4 md:px-6">
         {props.blogs.map((item) => (
-          <BlogsTeaser key={item.route} {...item} />
+          <RevealOnScroll>
+            <BlogsTeaser key={item.route} {...item} />
+          </RevealOnScroll>
         ))}
       </ol>
     </>
