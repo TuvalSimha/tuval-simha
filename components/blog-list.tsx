@@ -3,7 +3,6 @@ import path from "node:path";
 import { ReactElement } from "react";
 import type { GetStaticProps } from "next";
 import Link from "next/link";
-import { format } from "date-fns";
 import matter from "gray-matter";
 import { clsx } from "clsx";
 import { Title } from "./title";
@@ -36,7 +35,11 @@ function BlogsTeaser(props: Blog) {
             dateTime={props.date}
             className="text-xs text-neutral-600 dark:text-neutral-400"
           >
-            {format(new Date(props.date), "EEEE, LLL do y")}
+            {new Date(props.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </time>
         </div>
       </div>
