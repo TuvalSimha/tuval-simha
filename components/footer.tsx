@@ -12,7 +12,7 @@ type FooterItem = {
 
 const items: FooterItem[] = [
   {
-    href: "https://twitter.com/tuvalsimha",
+    href: "https://twitter.com/SimhaTuval",
     title: "Twitter",
     icon: <FaTwitter className="w-[24px] h-[24px] hover:fill-[#1DA1F2]" />,
   },
