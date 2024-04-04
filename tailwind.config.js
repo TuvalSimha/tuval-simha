@@ -23,13 +23,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: {
-        DEFAULT: "100rem",
-        sm: "200rem",
-        lg: "400rem",
-        xl: "500rem",
-        "2xl": "600rem",
-      },
+      padding: "100px",
     },
   },
   plugins: [],

@@ -1,7 +1,9 @@
+import React from "react";
+
 type LayoutProps = {
   children: React.ReactNode;
 };
 
-export function Layout({ children }: LayoutProps) {
-  return <div className="md:px-40">{children}</div>;
-}
+export const Layout = ({ children }: LayoutProps) => {
+  return <div className="px-6 md:px-28">{children}</div>;
+};
