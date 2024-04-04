@@ -6,7 +6,7 @@ export function Hero() {
     const router = useRouter();
     return (
         <section>
-            <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24 mb-[100px]">
+            <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24 mb-[30px]">
                 <div className="flex w-full mx-auto text-left">
                     <div className="relative inline-flex items-center mx-auto align-middle">
                         <div className="text-center">
@@ -18,16 +18,16 @@ export function Hero() {
                                 <div className="mt-3 rounded-lg sm:mt-0">
                                     <Button type="default" onClick={
                                         () => {
-                                            window.location.href = "#love";
+                                            router.push('/projects');
                                         }
                                     }>
-                                        In Love With
+                                        Projects
                                     </Button>
                                 </div>
                                 <div className="mt-3 rounded-lg sm:mt-0 sm:ml-3">
                                     <Button type="outline" onClick={
                                         () => {
-                                            router.push("/blog");
+                                            router.push('/blog');
                                         }
                                     }>
                                         Read Blogs

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { format } from 'date-fns';
 import matter from 'gray-matter';
 import { clsx } from "clsx"
+import { Title } from './title';
 
 
 type Blog = {
@@ -39,14 +40,7 @@ function BlogsTeaser(props: Blog) {
 export const BlogsUpdates = (props: { blogs: Blog[] }): ReactElement => {
     return (
         <>
-            <div className='w-full mt-[50px] mb-[50px] text-center'>
-                <h1 className="max-w-5xl text-center text-xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
-                    Blogs
-                </h1>
-                <p className="max-w-5xl text-center text-base font-bold leading-none tracking-tighter text-neutral-600 md:text-lg lg:text-lg lg:max-w-7xl">
-                    I write about web development, programming, and software engineering.
-                </p>
-            </div>
+            <Title title="Blogs" description="I write about web development, programming, and software engineering." />
             <ol className="relative px-4 md:px-6">
                 {props.blogs.map(item => (
                     <BlogsTeaser key={item.route} {...item} />

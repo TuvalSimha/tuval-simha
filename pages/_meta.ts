@@ -1,10 +1,9 @@
 export default {
   "index": {
-    title: "Introduction",
+    title: "Home Page",
     theme: {
       layout: "raw",
       navbar: true,
-      footer: false,
     }
   },
   "blog": {
@@ -13,7 +12,18 @@ export default {
     theme: {
       sidebar: false,
       toc: true,
-      breadcrumb: false,
+      breadcrumb: true,
+      "pagination": true
+    },
+  },
+  "projects": {
+    type: 'page',
+    title: 'Projects',
+    theme: {
+      sidebar: false,
+      toc: true,
+      breadcrumb: true,
+      "pagination": true
     },
   },
   "hire-me": {
