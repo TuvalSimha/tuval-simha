@@ -6,6 +6,9 @@ const withNextra = nextra({
 });
 
 export default withNextra({
+  env: {
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+  },
   webpack: (config, { webpack }) => {
     config.externals["node:fs"] = "commonjs node:fs";
     config.externals["node:path"] = "commonjs node:path";
