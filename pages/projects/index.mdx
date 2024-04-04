@@ -1,12 +1,11 @@
-import { useData } from 'nextra/hooks'
-import { ProjectsUpdates } from '../../components/projects-list'
+import { useData } from "nextra/hooks";
+import { ProjectsUpdates } from "../../components/projects-list";
 
-export { getStaticProps } from '../../components/projects-list'
+export { getStaticProps } from "../../components/projects-list";
 
 export const ProjectsUpdatesPage = () => {
-    const { projects } = useData()
-    return <ProjectsUpdates projects={projects} />
-}
-
+  const { projects } = useData();
+  return <ProjectsUpdates projects={projects} />;
+};
 
 <ProjectsUpdatesPage />

@@ -1,8 +1,8 @@
 export default {
-    index: {
-        "title": "Overview",
-        "theme": {
-            "layout": "raw",
-        }
+  index: {
+    title: "Overview",
+    theme: {
+      layout: "raw",
     },
+  },
 };
