@@ -6,6 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaRss } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { RevealOnScroll } from "../components/reveal-on-scroll";
 
 <HireMe />
 
@@ -23,37 +24,39 @@ Are technical challenges hindering your company's competitiveness? Whether it's 
 
 ## Lets Be In Touch
 
-<SmallCards
-  items={[
-    {
-      icon: <FaTwitter />,
-      title: "Twitter",
-      link: "https://twitter.com/tuvalsimha",
-    },
-    {
-      icon: <SiGmail />,
-      title: "Email",
-      link: "mailto:tuval.simha@gmail.com",
-    },
-    {
-      icon: <FaGithub />,
-      title: "GitHub",
-      link: "https://github.com/TuvalSimha",
-    },
-    {
-      icon: <FaLinkedin />,
-      title: "LinkedIn",
-      link: "https://www.linkedin.com/in/tuvalsimha/",
-    },
-    {
-      icon: <FaFacebook />,
-      title: "Facebook",
-      link: "https://www.facebook.com/TuvalSimha",
-    },
-    {
-      icon: <FaRss />,
-      title: "RSS",
-      link: "/feed.xml",
-    },
-  ]}
-/>
+<RevealOnScroll>
+  <SmallCards
+    items={[
+      {
+        icon: <FaTwitter />,
+        title: "Twitter",
+        link: "https://twitter.com/tuvalsimha",
+      },
+      {
+        icon: <SiGmail />,
+        title: "Email",
+        link: "mailto:tuval.simha@gmail.com",
+      },
+      {
+        icon: <FaGithub />,
+        title: "GitHub",
+        link: "https://github.com/TuvalSimha",
+      },
+      {
+        icon: <FaLinkedin />,
+        title: "LinkedIn",
+        link: "https://www.linkedin.com/in/tuvalsimha/",
+      },
+      {
+        icon: <FaFacebook />,
+        title: "Facebook",
+        link: "https://www.facebook.com/TuvalSimha",
+      },
+      {
+        icon: <FaRss />,
+        title: "RSS",
+        link: "/feed.xml",
+      },
+    ]}
+  />
+</RevealOnScroll>
