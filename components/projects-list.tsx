@@ -3,7 +3,7 @@ import type { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { clsx } from "clsx"
 import { Title } from './title';
-import { FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
 
 
 type Project = {
@@ -25,8 +25,8 @@ function ProjectsTeaser(props: Project) {
                     </div>
                 </Link>
                 <div className='p-4'>
-                    <p className='text-xs flex flex-row items-center gap-4 text-neutral-600 dark:text-neutral-400'>
-                        <FaStar color='yellow' />
+                    <p className='text-xs flex flex-row items-center gap-3 text-neutral-600 dark:text-neutral-400'>
+                        <FaStar className='fill-yellow-500' />
                         {props.stars} stars
                     </p>
                 </div>
@@ -77,10 +77,10 @@ export const getStaticProps: GetStaticProps<{ ssg: { projects: Project[] } }> = 
         const response = await fetch(project.url);
         const data = await response.json();
         projects.push({
-            title: data.name ?? 'No title',
-            stars: data.stargazers_count ?? 0,
-            href: data.html_url ?? '#',
-            description: data.description ?? 'No description',
+            title: data.name,
+            stars: data.stargazers_count,
+            href: data.html_url,
+            description: data.description,
         });
     }
 
