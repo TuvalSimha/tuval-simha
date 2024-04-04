@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node ./scripts/gen-rss.js && next build",
     "start": "next start",
     "prettier": "prettier --write ."
   },
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
+    "rss": "1.2.2",
     "clsx": "^2.1.0",
     "date-fns": "^3.6.0",
     "fs": "0.0.1-security",
