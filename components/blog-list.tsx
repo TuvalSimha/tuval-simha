@@ -35,7 +35,7 @@ function BlogsTeaser(props: Blog) {
           </div>
         </Link>
         <div className="p-4">
-          <div className="flex flex-row w-full items-center justify-start gap-3">
+          <div className="flex flex-col md:flex-row w-full items-center justify-start gap-3">
             <time dateTime={props.date} className="text-xs text-neutral-600">
               {new Date(props.date).toLocaleDateString("en-US", {
                 year: "numeric",
