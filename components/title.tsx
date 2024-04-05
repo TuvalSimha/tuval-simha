@@ -1,7 +1,7 @@
 type TitleProps = {
-  title: string;
-  description?: string;
-};
+  title: string
+  description?: string
+}
 
 export function Title({ title, description }: TitleProps) {
   return (
@@ -13,5 +13,5 @@ export function Title({ title, description }: TitleProps) {
         {description}
       </p>
     </div>
-  );
+  )
 }

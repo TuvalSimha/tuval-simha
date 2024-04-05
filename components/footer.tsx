@@ -1,14 +1,14 @@
-import { FaTwitter } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaRss } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa"
+import { FaFacebook } from "react-icons/fa"
+import { FaRss } from "react-icons/fa"
 
 type FooterItem = {
-  title: string;
-  href: string;
-  icon: React.ReactNode;
-};
+  title: string
+  href: string
+  icon: React.ReactNode
+}
 
 const items: FooterItem[] = [
   {
@@ -36,10 +36,10 @@ const items: FooterItem[] = [
     title: "RSS",
     icon: <FaRss className="w-[24px] h-[24px] hover:fill-[#FFA500]" />,
   },
-];
+]
 
 export function Footer() {
-  const thisYear = new Date().getFullYear();
+  const thisYear = new Date().getFullYear()
   return (
     <footer>
       <div>
@@ -68,5 +68,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

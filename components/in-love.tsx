@@ -1,21 +1,21 @@
-import { SiNodedotjs } from "react-icons/si";
-import { SiJavascript } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { SiHtml5 } from "react-icons/si";
-import { SiGraphql } from "react-icons/si";
-import { SiCloudflare } from "react-icons/si";
-import { SiVercel } from "react-icons/si";
-import { SiFirebase } from "react-icons/si";
-import { SiSqlite } from "react-icons/si";
-import { SiPostgresql } from "react-icons/si";
-import { SiReact } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
+import { SiNodedotjs } from "react-icons/si"
+import { SiJavascript } from "react-icons/si"
+import { SiTypescript } from "react-icons/si"
+import { SiCss3 } from "react-icons/si"
+import { SiHtml5 } from "react-icons/si"
+import { SiGraphql } from "react-icons/si"
+import { SiCloudflare } from "react-icons/si"
+import { SiVercel } from "react-icons/si"
+import { SiFirebase } from "react-icons/si"
+import { SiSqlite } from "react-icons/si"
+import { SiPostgresql } from "react-icons/si"
+import { SiReact } from "react-icons/si"
+import { SiNextdotjs } from "react-icons/si"
 
 type itemProps = {
-  name: string;
-  icon: React.ReactNode;
-};
+  name: string
+  icon: React.ReactNode
+}
 
 const items: itemProps[] = [
   {
@@ -70,7 +70,7 @@ const items: itemProps[] = [
     name: "Next.js",
     icon: <SiNextdotjs className="w-[40px] h-[40px]" color="#000" />,
   },
-];
+]
 
 export function InLove() {
   return (
@@ -116,5 +116,5 @@ export function InLove() {
         </div>
       </div>
     </div>
-  );
+  )
 }

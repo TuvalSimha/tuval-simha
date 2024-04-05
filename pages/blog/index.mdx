@@ -3,14 +3,14 @@ title: Blogs
 description: Blogs and updates by Tuval Simha
 ---
 
-import { useData } from "nextra/hooks";
-import { BlogsUpdates } from "../../components/blog-list";
+import { useData } from "nextra/hooks"
+import { BlogsUpdates } from "../../components/blog-list"
 
-export { getStaticProps } from "../../components/blog-list";
+export { getStaticProps } from "../../components/blog-list"
 
 export const BlogsUpdatesPage = () => {
-  const { blogs } = useData();
-  return <BlogsUpdates blogs={blogs} />;
-};
+  const { blogs } = useData()
+  return <BlogsUpdates blogs={blogs} />
+}
 
 <BlogsUpdatesPage />

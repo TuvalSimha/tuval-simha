@@ -1,6 +1,6 @@
-import { ComponentProps, ReactElement } from "react";
-import { clsx } from "clsx";
-import NextLink from "next/link";
+import { ComponentProps, ReactElement } from "react"
+import { clsx } from "clsx"
+import NextLink from "next/link"
 
 export function SmallCard({
   children,
@@ -8,9 +8,9 @@ export function SmallCard({
   as: Component = "div",
   ...props
 }: ComponentProps<"div"> & {
-  as?: string | typeof NextLink;
+  as?: string | typeof NextLink
 }): ReactElement {
-  const isLink = Component === "a" || Component === NextLink;
+  const isLink = Component === "a" || Component === NextLink
 
   return (
     <Component
@@ -31,5 +31,5 @@ export function SmallCard({
     >
       {children}
     </Component>
-  );
+  )
 }

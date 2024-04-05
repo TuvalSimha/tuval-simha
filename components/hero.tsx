@@ -1,8 +1,9 @@
-import { useRouter } from "next/router";
-import { Button } from "./button";
+import { useRouter } from "next/router"
+import { Button } from "./button"
 
 export function Hero() {
-  const router = useRouter();
+  const router = useRouter()
+
   return (
     <section>
       <div className="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
@@ -18,7 +19,7 @@ export function Hero() {
                   <Button
                     type="default"
                     onClick={() => {
-                      router.push("/projects");
+                      router.push("/projects")
                     }}
                   >
                     Projects
@@ -28,7 +29,7 @@ export function Hero() {
                   <Button
                     type="outline"
                     onClick={() => {
-                      router.push("/blog");
+                      router.push("/blog")
                     }}
                   >
                     Read Blogs
@@ -40,5 +41,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

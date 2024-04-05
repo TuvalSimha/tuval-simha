@@ -1,9 +1,9 @@
 type Card = {
-  title: string;
-  description: string;
-  href: string;
-  backgroundColor: string;
-};
+  title: string
+  description: string
+  href: string
+  backgroundColor: string
+}
 
 const cards: Card[] = [
   {
@@ -25,7 +25,7 @@ const cards: Card[] = [
     href: "/hire-me",
     backgroundColor: "bg-neutral-600",
   },
-];
+]
 
 export function Cards() {
   return (
@@ -42,5 +42,5 @@ export function Cards() {
         </a>
       ))}
     </div>
-  );
+  )
 }
