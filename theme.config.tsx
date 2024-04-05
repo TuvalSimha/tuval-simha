@@ -19,7 +19,6 @@ const config: DocsThemeConfig = {
     const { description, canonical } = frontMatter
     return (
       <>
-        {/* // when send the link to social media, it will show the title and description */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
