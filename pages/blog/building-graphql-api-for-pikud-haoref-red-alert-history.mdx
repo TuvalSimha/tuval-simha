@@ -5,19 +5,21 @@ date: 2024-04-06
 description: Learn how to build a GraphQL API for accessing Pikud HaOref red alert history data using Cloudflare Workers, GraphQL Yoga server, and GraphQL.
 ---
 
+import { Callout } from "nextra/components"
+
 # Building a GraphQL API for Pikud HaOref Red Alert History
 
 ## Introduction
 
-In times of crisis, timely access to critical information can be a matter of life and death. Pikud HaOref (Israel's Home Front Command) plays a vital role in alerting citizens about imminent security threats, particularly through its red alert system. In this blog post, I'll embark on a journey to build a GraphQL API that provides access to Pikud HaOref red alert history data. Leveraging the power of Cloudflare Workers, GraphQL Yoga server from The Guild, and GraphQL, I'll create a scalable and efficient solution for accessing this crucial information.
+Access to critical information during times of crisis can be a matter of life and death. Pikud HaOref (Israel's Home Front Command) plays a vital role in alerting citizens about imminent security threats, particularly through its red alert system. In this blog post, I'll guide you through the process of building a GraphQL API that provides seamless access to Pikud HaOref red alert history data. By harnessing the power of Cloudflare Workers, GraphQL Yoga server from The Guild, and GraphQL, we'll create a scalable and efficient solution for accessing this crucial information.
 
 ## Setting Up the Project
 
-To begin my project, I rely on a combination of powerful tools and technologies. I utilize Cloudflare Workers as my serverless execution environment, providing me with the flexibility and scalability needed to handle dynamic workloads. Additionally, I incorporate GraphQL Yoga server from The Guild, which offers a robust framework for building GraphQL APIs with ease. By leveraging GraphQL, I can define a flexible and intuitive schema for querying red alert data efficiently.
+To kickstart our project, we'll utilize a combination of powerful tools and technologies. Cloudflare Workers will serve as our serverless execution environment, offering the flexibility and scalability necessary to handle dynamic workloads. Additionally, we'll incorporate GraphQL Yoga server from The Guild, which provides a robust framework for building GraphQL APIs with ease. Leveraging GraphQL, we can define a flexible and intuitive schema for querying red alert data efficiently.
 
 ## Fetch the Data
 
-My journey starts with fetching red alert data from Pikud HaOref's official sources. I begin by defining a function to retrieve alerts from today using an endpoint provided by Pikud HaOref's website. This function handles HTTP requests, ensuring proper error handling and data parsing to provide a seamless experience for our users.
+Our journey begins with fetching red alert data from Pikud HaOref's official sources. We'll start by defining a function to retrieve alerts from today using an endpoint provided by Pikud HaOref's website. This function will handle HTTP requests, ensuring proper error handling and data parsing to provide a seamless experience for our users.
 
 ```typescript
 // Fetching alerts from today
@@ -41,7 +43,7 @@ export async function alertsFromToday() {
 
 ## Set Up the GraphQL Schema
 
-Next, I define my GraphQL schema to structure the data and operations available through my API. I focus on queries for fetching alerts from today, last week, last month, and within a specific date range. Additionally, I specify the structure of alert objects, including fields such as date, title, location, and category.
+Next, we'll define our GraphQL schema to structure the data and operations available through our API. We'll focus on queries for fetching alerts from today, last week, last month, and within a specific date range. Additionally, we'll specify the structure of alert objects, including fields such as date, title, location, and category.
 
 ```typescript
 // GraphQL schema definition
@@ -101,9 +103,9 @@ input AlertsInput {
 }
 ```
 
-## Run the Process and See GraphiQL
+## Run the Process and Explore with GraphiQL
 
-As I run my GraphQL server, I'm greeted with the powerful GraphiQL interface. GraphiQL provides an interactive playground for exploring and testing my API in real-time. With its intuitive autocomplete feature and built-in documentation, GraphiQL streamlines the process of querying my GraphQL schema, enabling me to iterate quickly and efficiently.
+As we run our GraphQL server, we're greeted with the powerful GraphiQL interface. GraphiQL provides an interactive playground for exploring and testing our API in real-time. With its intuitive autocomplete feature and built-in documentation, GraphiQL streamlines the process of querying our GraphQL schema, enabling us to iterate quickly and efficiently.
 
 ```typescript
 // Creating the Yoga server with schema and resolvers
@@ -138,6 +140,13 @@ const yoga = createYoga<Env>({
 
 ## Conclusion
 
-In conclusion, building a GraphQL API for accessing Pikud HaOref red alert history data provides a valuable resource for citizens and researchers alike. By leveraging the power of Cloudflare Workers, GraphQL Yoga server, and GraphQL, I've created a scalable and efficient solution for accessing critical information during times of crisis. The combination of advanced technologies and best practices in API development ensures a seamless experience for users, empowering them with timely access to essential information.
+In conclusion, building a GraphQL API for accessing Pikud HaOref red alert history data provides a valuable resource for citizens and researchers alike. By leveraging the power of Cloudflare Workers, GraphQL Yoga server, and GraphQL, we've created a scalable and efficient solution for accessing critical information during times of crisis. The combination of advanced technologies and best practices in API development ensures a seamless experience for users, empowering them with timely access to essential information.
 
-As I continue to refine and optimize my GraphQL API, I'm committed to providing a reliable and accessible platform for accessing Pikud HaOref red alert history data. Through ongoing innovation and collaboration, I aim to enhance the resilience and responsiveness of my system, ensuring it remains a trusted source of information for years to come.
+<Callout type="info" emoji="ℹ️">
+  To explore the live demo of our GraphQL API, [visit
+  here](https://pikud-haoref-graphql-api.tuval-simha.workers.dev/graphql).
+</Callout>
+
+For the source code and further exploration,[ check out our GitHub repository here](https://github.com/TuvalSimha/pikud-haoref-api-graphql).
+
+As we continue to refine and optimize our GraphQL API, we're committed to providing a reliable and accessible platform for accessing Pikud HaOref red alert history data. Through ongoing innovation and collaboration, we aim to enhance the resilience and responsiveness of our system, ensuring it remains a trusted source of information for years to come.
