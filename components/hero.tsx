@@ -1,9 +1,8 @@
-import { useRouter } from "next/router";
-import { Button } from "./button";
+import { useRouter } from "next/router"
+import { Button } from "./button"
 
 export function Hero() {
-  const router = useRouter();
-
+  const router = useRouter()
 
   return (
     <section>
@@ -20,7 +19,7 @@ export function Hero() {
                   <Button
                     type="default"
                     onClick={() => {
-                      router.push("/projects");
+                      router.push("/projects")
                     }}
                   >
                     Projects
@@ -30,7 +29,7 @@ export function Hero() {
                   <Button
                     type="outline"
                     onClick={() => {
-                      router.push("/blog");
+                      router.push("/blog")
                     }}
                   >
                     Read Blogs
@@ -42,5 +41,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

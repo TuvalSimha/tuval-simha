@@ -54,9 +54,9 @@ After you installed all Cloudflare packages and run `wrangler init`, you got the
 ```ts
 export default {
   async fetch(request) {
-    return new Response("Hello World!");
+    return new Response("Hello World!")
   },
-};
+}
 ```
 
 This function will fetch any change in the URL of the worker.
@@ -72,7 +72,7 @@ async function scheduled(
   env: Env,
   ctx: ExecutionContext,
 ): Promise<void> {
-  await run(env);
+  await run(env)
 }
 ```
 
@@ -84,9 +84,9 @@ Workers. We create a Slack bot that sends a daily message about all open pull re
 
 ```ts filename="index.ts"
 export async function run(env: Env) {
-  const slack = createSlackClient(env.SLACK_TOKEN);
+  const slack = createSlackClient(env.SLACK_TOKEN)
   // We use Slack Client to send messages
-  const octokit = new Octokit({ auth: env.GH_BOT_TOKEN });
+  const octokit = new Octokit({ auth: env.GH_BOT_TOKEN })
   // We use Octokit to use GitHub API
   // ... WRITE ANY CODE YOU WANT HERE
 }

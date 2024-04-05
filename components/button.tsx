@@ -1,9 +1,9 @@
 type ButtonProps = {
-  children: React.ReactNode;
-  type: "default" | "outline";
-  onClick?: () => void;
-  href?: string;
-};
+  children: React.ReactNode
+  type: "default" | "outline"
+  onClick?: () => void
+  href?: string
+}
 
 export function Button({ href, children, type, onClick }: ButtonProps) {
   return (
@@ -14,5 +14,5 @@ export function Button({ href, children, type, onClick }: ButtonProps) {
     >
       {children}
     </button>
-  );
+  )
 }

@@ -1,17 +1,17 @@
-import { ReactElement } from "react";
-import { SmallCard } from "./small-card";
-import { clsx } from "clsx";
-import NextLink from "next/link";
+import { ReactElement } from "react"
+import { SmallCard } from "./small-card"
+import { clsx } from "clsx"
+import NextLink from "next/link"
 
 export function SmallCards({
   items,
 }: {
   items: {
-    icon: ReactElement;
-    title: string;
-    description?: string;
-    link: string;
-  }[];
+    icon: ReactElement
+    title: string
+    description?: string
+    link: string
+  }[]
 }) {
   return (
     <div className="grid grid-cols-2 mt-6 gap-4">
@@ -22,7 +22,7 @@ export function SmallCards({
           link,
           description = link.replace(/^https?:\/\//, ""),
         }) => {
-          const isExternal = link.startsWith("https://");
+          const isExternal = link.startsWith("https://")
           return (
             <SmallCard
               key={title}
@@ -40,9 +40,9 @@ export function SmallCards({
                 {description}
               </span>
             </SmallCard>
-          );
+          )
         },
       )}
     </div>
-  );
+  )
 }

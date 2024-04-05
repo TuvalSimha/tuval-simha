@@ -31,10 +31,10 @@ variable that can hold multiple data types: integer or number, character, string
 Here you can find a basic example:
 
 ```ts
-let pizzaLover: string | boolean; // pizzaLover can be a string or boolean type
+let pizzaLover: string | boolean // pizzaLover can be a string or boolean type
 
-pizzaLover = "YES"; // string type
-pizzaLover = true; // boolean type
+pizzaLover = "YES" // string type
+pizzaLover = true // boolean type
 ```
 
 [Here's a live example in TS Playground](https://www.typescriptlang.org/play?#code/DYUwLgBADglgXnAhgGQPYDcQCcBcEDOYWMAdgOYQA+EARqqqIiQLABQbsCKG2EAvBADkATQCiAZUEQA9NIJFSFMAE8oIDvCRpMWfhCIBXEDLl0GIJvtXrWsiAD0A-GyA)
@@ -47,18 +47,18 @@ type that contains some others types. Here is a simple example that combines 2 t
 
 ```ts
 type Sushi = {
-  kind: "Sushi";
-  fish: string;
-  amount: number;
-};
+  kind: "Sushi"
+  fish: string
+  amount: number
+}
 
 type Pizza = {
-  kind: "Pizza";
-  topping: string;
-  amount: number;
-};
+  kind: "Pizza"
+  topping: string
+  amount: number
+}
 
-type Food = Sushi | Pizza;
+type Food = Sushi | Pizza
 ```
 
 [Here's a live example in TS Playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBAygrgZwBYEsoF4oG8CwAoKKAaxQDsATALigHJ5kUb9CAzFZahYAJzIHNmUAIYBbAPZxSwaqTgiARhG74AvvnyhIUAAooAXnqEZsgkhWo1dBoUwJRgYsGH6ce-QaIlSZcxcrxqeOp4mtAAYmJi5Mb0qFAAPjr6hsFAA)
@@ -66,10 +66,10 @@ type Food = Sushi | Pizza;
 And another Union type example, this time with `string` and `string`:
 
 ```ts
-type PizzaAddons = "olives" | "mushrooms" | "pepperoni";
+type PizzaAddons = "olives" | "mushrooms" | "pepperoni"
 
-const myPreference: PizzaAddons = "olives"; // ok
-const myPreference: PizzaAddons = "pineapple"; // error
+const myPreference: PizzaAddons = "olives" // ok
+const myPreference: PizzaAddons = "pineapple" // error
 ```
 
 [Here's a live example in TS Playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBACglgLwQQwIIBN0HsB2BnKAXigHIsAbOANwjxKgB9SBbAVzwAsAnLLZuxqUhhIPHHBIBYAFAyAxrjzAozEDC4QAZhA045EAFyxEKDNnxFSFarXoB6O1CwBreYuWr1WnRD2HjSGiYipYkYHA4EMgi5BD2jjo8XDJAA)
@@ -140,7 +140,7 @@ const menuQuery = gql`
     title
     topping
   }
-`;
+`
 ```
 
 Get the `Menu` type from the schema with the query, so we will be able to get the objects inside the
@@ -149,10 +149,10 @@ Get the `Menu` type from the schema with the query, so we will be able to get th
 ```ts
 const Menu = () => {
   const { data } = useQuery<MenuQuery>("menu", async () => {
-    const { menu } = await request(endpoint, menuQuery);
-    return menu;
-  });
-};
+    const { menu } = await request(endpoint, menuQuery)
+    return menu
+  })
+}
 ```
 
 ## Conclusion

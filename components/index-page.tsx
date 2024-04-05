@@ -1,7 +1,7 @@
-import { Cards } from "./cards";
-import { Hero } from "./hero";
-import { InLove } from "./in-love";
-import { RevealOnScroll } from "./reveal-on-scroll";
+import { Cards } from "./cards"
+import { Hero } from "./hero"
+import { InLove } from "./in-love"
+import { RevealOnScroll } from "./reveal-on-scroll"
 
 export function IndexPage() {
   return (
@@ -12,5 +12,5 @@ export function IndexPage() {
         <Cards />
       </RevealOnScroll>
     </>
-  );
+  )
 }

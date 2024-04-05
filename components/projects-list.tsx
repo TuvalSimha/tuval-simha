@@ -1,17 +1,17 @@
-import { ReactElement } from "react";
-import type { GetStaticProps } from "next";
-import Link from "next/link";
-import { clsx } from "clsx";
-import { Title } from "./title";
-import { FaStar } from "react-icons/fa6";
-import { RevealOnScroll } from "./reveal-on-scroll";
+import { ReactElement } from "react"
+import type { GetStaticProps } from "next"
+import Link from "next/link"
+import { clsx } from "clsx"
+import { Title } from "./title"
+import { FaStar } from "react-icons/fa6"
+import { RevealOnScroll } from "./reveal-on-scroll"
 
 type Project = {
-  title: string;
-  stars: number;
-  description: string;
-  href: string;
-};
+  title: string
+  stars: number
+  description: string
+  href: string
+}
 
 function ProjectsTeaser(props: Project) {
   return (
@@ -37,11 +37,11 @@ function ProjectsTeaser(props: Project) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export const ProjectsUpdates = (props: {
-  projects: Project[];
+  projects: Project[]
 }): ReactElement => {
   return (
     <>
@@ -57,12 +57,12 @@ export const ProjectsUpdates = (props: {
         ))}
       </ol>
     </>
-  );
-};
+  )
+}
 
 type ProjectUrl = {
-  url: string;
-};
+  url: string
+}
 
 const projectsList: ProjectUrl[] = [
   {
@@ -80,11 +80,11 @@ const projectsList: ProjectUrl[] = [
   {
     url: "https://api.github.com/repos/TuvalSimha/slide-show-project",
   },
-];
+]
 export const getStaticProps: GetStaticProps<{
-  ssg: { projects: Project[] };
+  ssg: { projects: Project[] }
 }> = async () => {
-  const projects: Project[] = [];
+  const projects: Project[] = []
 
   try {
     for (const project of projectsList) {
@@ -93,29 +93,29 @@ export const getStaticProps: GetStaticProps<{
           Authorization: `token ${process.env.GITHUB_TOKEN}`,
           Accept: "application/vnd.github.v3+json",
         },
-      });
+      })
 
       if (!response.ok) {
-        console.error(`Failed to fetch ${project.url}: ${response.status}`);
-        continue;
+        console.error(`Failed to fetch ${project.url}: ${response.status}`)
+        continue
       }
 
-      const data = await response.json();
+      const data = await response.json()
 
       projects.push({
         title: data.name,
         stars: data.stargazers_count,
         href: data.html_url,
         description: data.description,
-      });
+      })
     }
   } catch (error) {
-    console.error("Error fetching projects:", error);
+    console.error("Error fetching projects:", error)
   }
 
   return {
     props: {
       ssg: { projects },
     },
-  };
-};
+  }
+}

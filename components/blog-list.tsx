@@ -1,22 +1,22 @@
-import fs from "node:fs";
-import path from "node:path";
-import { ReactElement } from "react";
-import type { GetStaticProps } from "next";
-import Link from "next/link";
-import matter from "gray-matter";
-import { clsx } from "clsx";
-import { Title } from "./title";
-import { RevealOnScroll } from "./reveal-on-scroll";
-import { TheGuild } from "./icons/the-guild";
-import { TheGuildLogo } from "./icons/the-guild-logo";
+import fs from "node:fs"
+import path from "node:path"
+import { ReactElement } from "react"
+import type { GetStaticProps } from "next"
+import Link from "next/link"
+import matter from "gray-matter"
+import { clsx } from "clsx"
+import { Title } from "./title"
+import { RevealOnScroll } from "./reveal-on-scroll"
+import { TheGuild } from "./icons/the-guild"
+import { TheGuildLogo } from "./icons/the-guild-logo"
 
 type Blog = {
-  title: string;
-  date: string;
-  description: string;
-  route: string;
-  references?: string;
-};
+  title: string
+  date: string
+  description: string
+  route: string
+  references?: string
+}
 
 function BlogsTeaser(props: Blog) {
   return (
@@ -57,7 +57,7 @@ function BlogsTeaser(props: Blog) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export const BlogsUpdates = (props: { blogs: Blog[] }): ReactElement => {
@@ -75,15 +75,15 @@ export const BlogsUpdates = (props: { blogs: Blog[] }): ReactElement => {
         ))}
       </ol>
     </>
-  );
-};
+  )
+}
 
 export const getStaticProps: GetStaticProps<{
-  ssg: { blogs: Blog[] };
+  ssg: { blogs: Blog[] }
 }> = async () => {
-  const blogsDirectory = path.join(process.cwd(), "pages", "blog");
-  const filenames = fs.readdirSync(blogsDirectory);
-  const blogs: Blog[] = [];
+  const blogsDirectory = path.join(process.cwd(), "pages", "blog")
+  const filenames = fs.readdirSync(blogsDirectory)
+  const blogs: Blog[] = []
 
   for (const filename of filenames) {
     if (
@@ -91,13 +91,13 @@ export const getStaticProps: GetStaticProps<{
       filename.endsWith("index.mdx") ||
       filename.endsWith(".ts")
     ) {
-      continue;
+      continue
     }
 
     const { data } = matter(
       fs.readFileSync(path.join(blogsDirectory, filename), "utf8"),
       {},
-    );
+    )
 
     if (data.title && data.description && data.date) {
       blogs.push({
@@ -106,15 +106,15 @@ export const getStaticProps: GetStaticProps<{
         description: data.description,
         route: `/blog/${filename.replace(/\.mdx$/, "")}`,
         references: data.references ? data.references : null,
-      });
+      })
     }
   }
 
-  blogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  blogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return {
     props: {
       ssg: { blogs },
     },
-  };
-};
+  }
+}

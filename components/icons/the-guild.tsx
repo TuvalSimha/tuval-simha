@@ -1,4 +1,4 @@
-import { ComponentProps, ReactElement } from "react";
+import { ComponentProps, ReactElement } from "react"
 
 export const TheGuild = (props: ComponentProps<"svg">): ReactElement => (
   <svg
@@ -18,4 +18,4 @@ export const TheGuild = (props: ComponentProps<"svg">): ReactElement => (
     <path d="M28.1958 24.6622H35.8283V22.1626H30.8465V14.5604H28.1958V24.6622Z" />
     <path d="M37.1999 24.6622H42.0218C45.2719 24.6622 46.937 22.3698 46.937 19.6113C46.937 16.8657 45.2719 14.5604 42.0218 14.5604H37.1999V24.6622ZM41.822 17.0729C43.4071 17.0729 44.2463 18.096 44.2463 19.6113C44.2463 21.1266 43.4071 22.1626 41.822 22.1626H39.864V17.0729H41.822Z" />
   </svg>
-);
+)

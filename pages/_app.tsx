@@ -1,9 +1,9 @@
-import { ReactElement } from "react";
-import { AppProps } from "next/app";
-import "../styles/globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import { Layout } from "../components/layout";
-import Head from "next/head";
+import { ReactElement } from "react"
+import { AppProps } from "next/app"
+import "../styles/globals.css"
+import { Analytics } from "@vercel/analytics/react"
+import { Layout } from "../components/layout"
+import Head from "next/head"
 
 export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
@@ -19,5 +19,5 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
       <Component {...pageProps} />
       <Analytics />
     </Layout>
-  );
+  )
 }
