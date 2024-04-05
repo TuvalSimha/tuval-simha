@@ -45,6 +45,7 @@ function BlogsTeaser(props: Blog) {
             </time>
             {props.references && (
               <a
+                target="_blank"
                 href={props.references}
                 className="ml-2 gap-2 text-xs text-neutral-500 flex flex-row items-center "
               >
