@@ -7,12 +7,15 @@ import matter from "gray-matter";
 import { clsx } from "clsx";
 import { Title } from "./title";
 import { RevealOnScroll } from "./reveal-on-scroll";
+import { TheGuild } from "./icons/the-guild";
+import { TheGuildLogo } from "./icons/the-guild-logo";
 
 type Blog = {
   title: string;
   date: string;
   description: string;
   route: string;
+  references?: string;
 };
 
 function BlogsTeaser(props: Blog) {
@@ -32,16 +35,25 @@ function BlogsTeaser(props: Blog) {
           </div>
         </Link>
         <div className="p-4">
-          <time
-            dateTime={props.date}
-            className="text-xs text-neutral-600 dark:text-neutral-400"
-          >
-            {new Date(props.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </time>
+          <div className="flex flex-row w-full items-center justify-start gap-3">
+            <time dateTime={props.date} className="text-xs text-neutral-600">
+              {new Date(props.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+            {props.references && (
+              <a
+                href={props.references}
+                className="ml-2 gap-2 text-xs text-neutral-500 flex flex-row items-center "
+              >
+                Original published on{" "}
+                <TheGuild className="w-[24px] h-[24px] fill-black" />{" "}
+                <TheGuildLogo className="w-[24px] h-[24px] fill-black" />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -93,6 +105,7 @@ export const getStaticProps: GetStaticProps<{
         title: data.title,
         description: data.description,
         route: `/blog/${filename.replace(/\.mdx$/, "")}`,
+        references: data.references ? data.references : null,
       });
     }
   }

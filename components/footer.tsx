@@ -50,7 +50,7 @@ export function Footer() {
           <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
             © {thisYear} Tuval Simha —
             <a
-              href="https://twitter.com/tuvalsimha"
+              href="https://twitter.com/SimhaTuval"
               rel="noopener noreferrer"
               className="text-gray-600 ml-1"
               target="_blank"
