@@ -49,13 +49,13 @@ export const ProjectsUpdates = (props: {
         title="Projects"
         description="I build projects to learn and to help others learn."
       />
-      <ol className="relative px-4 md:px-6">
+      <div className="relative px-4 md:px-6">
         {props.projects.map((item) => (
-          <RevealOnScroll>
+          <RevealOnScroll key={item.href}>
             <ProjectsTeaser key={item.href} {...item} />
           </RevealOnScroll>
         ))}
-      </ol>
+      </div>
     </>
   )
 }
@@ -72,6 +72,9 @@ const projectsList: ProjectUrl[] = [
     url: "https://api.github.com/repos/TuvalSimha/yoga-cloudflare-workers-template",
   },
   {
+    url: "https://api.github.com/repos/TuvalSimha/tuval-simha"
+  },
+  {
     url: "https://api.github.com/repos/TuvalSimha/happy-animation",
   },
   {
@@ -79,7 +82,7 @@ const projectsList: ProjectUrl[] = [
   },
   {
     url: "https://api.github.com/repos/TuvalSimha/slide-show-project",
-  },
+  }
 ]
 export const getStaticProps: GetStaticProps<{
   ssg: { projects: Project[] }
