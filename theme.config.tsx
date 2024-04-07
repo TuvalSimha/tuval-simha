@@ -10,6 +10,15 @@ const logo = (
 )
 
 const config: DocsThemeConfig = {
+  docsRepositoryBase: "https://github.com/TuvalSimha/tuval-simha",
+  project: {
+    link: "https://github.com/TuvalSimha/tuval-simha",
+  },
+  nextThemes: {
+    defaultTheme: "light",
+    forcedTheme: "light",
+    storageKey: "nextra-theme-docs",
+  },
   logo: logo,
   head: function useHead() {
     const { frontMatter, title: pageTitle } = useConfig()
