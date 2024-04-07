@@ -12,7 +12,7 @@ const logo = (
 const config: DocsThemeConfig = {
   docsRepositoryBase: "https://github.com/TuvalSimha/tuval-simha",
   project: {
-    link: 'https://github.com/TuvalSimha/tuval-simha',
+    link: "https://github.com/TuvalSimha/tuval-simha",
   },
   nextThemes: {
     defaultTheme: "light",

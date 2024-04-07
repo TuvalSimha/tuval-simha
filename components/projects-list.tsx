@@ -72,7 +72,7 @@ const projectsList: ProjectUrl[] = [
     url: "https://api.github.com/repos/TuvalSimha/yoga-cloudflare-workers-template",
   },
   {
-    url: "https://api.github.com/repos/TuvalSimha/tuval-simha"
+    url: "https://api.github.com/repos/TuvalSimha/tuval-simha",
   },
   {
     url: "https://api.github.com/repos/TuvalSimha/happy-animation",
@@ -82,7 +82,7 @@ const projectsList: ProjectUrl[] = [
   },
   {
     url: "https://api.github.com/repos/TuvalSimha/slide-show-project",
-  }
+  },
 ]
 export const getStaticProps: GetStaticProps<{
   ssg: { projects: Project[] }
