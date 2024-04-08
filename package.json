@@ -12,17 +12,18 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
-    "rss": "1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "clsx": "2.1.0",
     "fs": "0.0.1-security",
     "gray-matter": "4.0.3",
     "next": "13.0.0",
     "nextra": "3.0.0-alpha.22",
     "nextra-theme-docs": "3.0.0-alpha.22",
+    "prettier": "3.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^5.0.1",
-    "prettier": "3.2.5"
+    "rss": "1.2.2"
   },
   "devDependencies": {
     "@types/node": "20.12.3",
