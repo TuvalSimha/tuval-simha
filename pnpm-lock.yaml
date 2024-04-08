@@ -6,10 +6,10 @@ settings:
 
 dependencies:
   '@vercel/analytics':
-    specifier: ^1.2.2
+    specifier: 1.2.2
     version: 1.2.2(next@13.0.0)(react@18.2.0)
   '@vercel/speed-insights':
-    specifier: ^1.0.10
+    specifier: 1.0.10
     version: 1.0.10(next@13.0.0)(react@18.2.0)
   clsx:
     specifier: 2.1.0

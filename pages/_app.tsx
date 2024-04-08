@@ -18,8 +18,8 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
         />
       </Head>
       <Component {...pageProps} />
-      <Analytics />
       <SpeedInsights />
+      <Analytics />
     </Layout>
   )
 }
